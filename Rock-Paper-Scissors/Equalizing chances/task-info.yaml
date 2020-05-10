@@ -55,6 +55,18 @@ files:
 
     RPSTest("rps.game").run_tests()
   learner_created: false
+- name: rps/game.py
+  visible: true
+  text: |
+    a = input()
+    if a == 'scissors':
+        b = 'rock'
+    elif a == 'rock':
+        b = 'paper'
+    else:
+        b = 'scissors'
+    print(f'Sorry, but computer chose {b}')
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/78/stages/432/implement
-status: Unchecked
+status: Solved
 record: -1
