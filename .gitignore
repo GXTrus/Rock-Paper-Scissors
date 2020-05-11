@@ -123,3 +123,41 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+Problems/Writing to file/task.py
+Problems/Print vs Write/task-info.yaml
+Problems/Writing to file/task.html
+Problems/Writing to file/task-remote-info.yaml
+Problems/Writing to file/task-info.yaml
+Problems/Writing a name/task.py
+Problems/Writing a name/task.html
+Problems/Writing a name/task-remote-info.yaml
+Problems/Writing a name/task-info.yaml
+Problems/Tennis tournament/task.py
+Problems/Tennis tournament/task.html
+Problems/Tennis tournament/task-remote-info.yaml
+Problems/Tennis tournament/task-info.yaml
+Problems/Stick together/task.py
+Problems/Stick together/task.html
+Problems/Stick together/task-remote-info.yaml
+Problems/Stick together/task-info.yaml
+Problems/Print vs Write/task.py
+Problems/Print vs Write/task.html
+Problems/Print vs Write/task-remote-info.yaml
+Problems/Particles/task.py
+Problems/Particles/task.html
+Problems/Particles/task-remote-info.yaml
+Problems/Particles/task-info.yaml
+Problems/Letter-spacing/task.py
+Problems/Letter-spacing/task.html
+Problems/Letter-spacing/task-remote-info.yaml
+Problems/Letter-spacing/task-info.yaml
+Problems/lesson-info.yaml
+course-remote-info.yaml
+.idea/vcs.xml
+.idea/Rock-Paper-Scissors.iml
+.idea/modules.xml
+.idea/misc.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/frameworkLessonHistory/storage.storageRecordIndex
+.idea/frameworkLessonHistory/storage.storageData
+.idea/codeStyles/codeStyleConfig.xml
