@@ -1,10 +1,11 @@
+from collections import deque
 import random
 
 
 class RockPaperScissors:
 
     def __init__(self):
-        self.item_list = ['paper', 'scissors', 'rock']
+        self.item_list = deque(('paper', 'scissors', 'rock'))
         self.rating_file = 'rating.txt'
         self.players_scores = {}
         self.game()
@@ -16,7 +17,7 @@ class RockPaperScissors:
         self.check_name(self.user_name)
         words = input().strip()
         if words != '':
-            self.item_list = words.split(',')
+            self.item_list = deque((words.split(',')))
         print("Okay, let's start")
         while check:
             self.human = input()
@@ -34,14 +35,9 @@ class RockPaperScissors:
         self.cpu = random.choice(self.item_list)
         human_i = self.item_list.index(self.human)
         half = len(self.item_list) // 2
-        if human_i > half:
-            temp_list = self.item_list[human_i - half:] + self.item_list[:human_i - half]
-        elif human_i < half:
-            temp_list = self.item_list[human_i + half + 1:] + self.item_list[:human_i + half + 1]
-        else:
-            temp_list = self.item_list[:]
-        human_i = temp_list.index(self.human)
-        cpu_i = temp_list.index(self.cpu)
+        self.item_list.rotate(half - human_i)
+        human_i = self.item_list.index(self.human)
+        cpu_i = self.item_list.index(self.cpu)
         if cpu_i == human_i:
             print(f'There is a draw ({self.cpu})')
             self.players_scores[self.user_name] += 50
@@ -60,10 +56,6 @@ class RockPaperScissors:
         except FileNotFoundError:
             with open(self.rating_file, 'w', encoding='utf-8') as file:
                 file.write('')
-        with open(self.rating_file, 'r') as file:
-            for line in file.readlines():
-                a = line.strip().split()
-                self.players_scores[a[0]] = int(a[1])
         if self.players_scores.get(name) is None:
             self.players_scores[name] = 0
 
